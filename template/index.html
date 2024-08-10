@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>ML DEPLOYMENT</title>
+</head>
+
+<body>
+ <div class="login">
+	<h1>Superstore Offer Classification</h1>
+    <p>Muhammad Ghifary Komara Putra (19623130/13523066) Klan I</p>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="Income" placeholder="Income" required="required" />
+        <br>
+        <input type="text" name="Recency" placeholder="Recency" required="required" />
+        <br>
+		<input type="text" name="MntWines" placeholder="MntWines" required="required" />
+        <br>
+		<input type="text" name="MntMeatProducts" placeholder="MntMeatProducts" required="required" />
+        <br>
+        
+        <input type="text" name="MntFishProducts" placeholder="MntFishProducts" required="required" />
+        <br>
+        <input type="text" name="MntGoldProds" placeholder="MntGoldProds" required="required" />
+        <br>
+		<input type="text" name="NumStorePurchases" placeholder="NumStorePurchases" required="required" />
+        <br>
+		<input type="text" name="NumWebVisitsMonth" placeholder="NumWebVisitsMonth" required="required" />
+        <br>
+
+        <input type="text" name="Age" placeholder="Age" required="required" />
+        <br>
+        <input type="text" name="totalMnt" placeholder="totalMnt" required="required" />
+        <br>
+		<input type="text" name="Income_Per_Capita" placeholder="Income_Per_Capita" required="required" />
+        <br>
+		<input type="text" name="Enrollment_Days" placeholder="Enrollment_Days" required="required" />
+        <br>
+
+        <input type="text" name="Deals_Pct" placeholder="Deals_Pct" required="required" />
+        <br>
+        <input type="text" name="Purchase_Freq" placeholder="Purchase_Freq" required="required" />
+        <br>
+        <br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
